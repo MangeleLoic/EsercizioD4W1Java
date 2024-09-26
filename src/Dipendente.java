@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public abstract class Dipendente {
+public abstract class Dipendente implements CheckIn {
 
     private int matricola;
     private double stipendio;
@@ -32,5 +32,13 @@ public abstract class Dipendente {
     }
 
     public abstract void calculateSalary();
+
+    @Override
+    public void checkIn() {
+        System.out.println("Check-In Dipendente:");
+        System.out.println("Matricola: " + matricola);
+        System.out.println("Stipendio: " + stipendio);
+        System.out.println("Dipartimento: " + dipartimento);
+    }
 }
 
